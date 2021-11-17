@@ -20,14 +20,15 @@ const io = socketio(server, {
 io.on('connection', socket => {
     console.log("have new connection");
     socket.on('newUser', ({username, room}) =>{
-
         const {error, user} = addUser({id: socket.id, name: username, room})
         if(error){
             console.log('error')
             return;
         }
-        socket.broadcast.to(user.room).emit('message', {user: 'server', text: `${user.name} has joined`, time: moment().format('h:mm a')});
         socket.join(user.room);
+
+        socket.broadcast.to(user.room).emit('message', {user: 'server', text: `${user.name} has joined`, time: moment().format('h:mm a')});
+        io.to(user.room).emit('roomData', { room: user.room, users: getRoomUsers(user.room) });
 
     })
 
@@ -40,7 +41,11 @@ io.on('connection', socket => {
     socket.on('disconnect', () => {
         console.log("user left");
         const user = removeUser(socket.id)
-        io.to(user.room).emit('message', {user: 'server', text: `${user.name} has left`, time: moment().format('h:mm a')})
+
+        if(user){
+            io.to(user.room).emit('message', {user: 'server', text: `${user.name} has left`, time: moment().format('h:mm a')})
+            io.to(user.room).emit('roomData', { room: user.room, users: getRoomUsers(user.room)});
+        }
     })
 })
 

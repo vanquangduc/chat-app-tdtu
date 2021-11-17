@@ -1,0 +1,83 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.outsideHomeContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(45deg, #b9deed, #efefef);
+    height: 100%;
+}
+
+.insideHomeContainer {
+    width: 20%;
+}
+
+.homeInput {
+    border-radius: 20px;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+}
+
+.homeInput:focus{
+    border: none;
+    background-color: #edfaff;
+    transition: 0.5s;
+}
+
+.heading {
+    font-weight: 800;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    background: -webkit-linear-gradient(45deg, #ee5c87, #f1a4b5, #d587b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button {
+    color: black !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background:  #78d9ff;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+}
+
+.button:hover{
+    transition: 0.5s;
+    background: #1dbfff;
+    cursor: pointer;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .outsideHomeContainer {
+        height: 100%;
+    }
+
+    .insideHomeContainer {
+        width: 90%;
+    }
+
+
+}

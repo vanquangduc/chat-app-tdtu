@@ -1,0 +1,72 @@
+.messageBox {
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 70%;
+  color: #353535;
+}
+
+.messageText {
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0;
+  float: left;
+  font-size: 1.1em;
+  word-wrap: break-word;
+  justify-content: center;
+}
+
+.messageText img {
+  vertical-align: middle;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+  margin-top: 3px;
+}
+
+.sentText {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  color: #828282;
+  letter-spacing: 0.3px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+
+.userBackground {
+  background: #b9deed;
+}
+
+.friendBackground {
+  background: #d3ffe8;
+}
+
+.timeSetting{
+  display: flex;
+  color: #828282;
+  letter-spacing: 0.3px;
+  font-size: 11;
+}
+
+
