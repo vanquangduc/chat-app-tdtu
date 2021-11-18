@@ -6,6 +6,8 @@
 .pnp.js
 server/node_modules
 client/node_modules
+client/.git
+server/.git
 
 # testing
 /coverage
