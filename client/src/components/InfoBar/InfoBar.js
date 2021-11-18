@@ -10,7 +10,7 @@ const InfoBar = ({ room }) => (
       <h3>Room ID: {room}</h3>
     </div>
     <div className="rightInnerContainer">
-      <a href="/"><img src={closeIcon} alt="close icon"/></a>
+      <a href="javascript:history.back()"><img src={closeIcon} alt="close icon"/></a>
     </div>
   </div>
 );
