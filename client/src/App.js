@@ -5,7 +5,7 @@ import Home from './components/Home/Home'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/chat-app-tdtu">
       <Route path="/" exact component={Home}/>
       <Route path="/chat" component={Chat}/>
     </Router>

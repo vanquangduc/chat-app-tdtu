@@ -2,7 +2,6 @@ import React from 'react';
 
 import onlineIcon from '../icons/onlineIcon.png';
 import avt from '../icons/profile.png'
-import ScrollToBottom from 'react-scroll-to-bottom';
 import './UserList.css';
 
 const UserList = ({ users }) => (
