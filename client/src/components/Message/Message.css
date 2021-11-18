@@ -16,6 +16,7 @@
   font-size: 1.1em;
   word-wrap: break-word;
   justify-content: center;
+  margin: auto;
 }
 
 .messageText img {
