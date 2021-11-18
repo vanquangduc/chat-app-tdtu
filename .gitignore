@@ -6,6 +6,8 @@
 .pnp.js
 server/node_modules
 client/node_modules
+client/.gitignore
+server/.gitignore
 client/.git
 server/.git
 
