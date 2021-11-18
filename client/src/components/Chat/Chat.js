@@ -7,7 +7,7 @@ import UserList from "../UserList/UserList";
 import InfoBar from "../InfoBar/InfoBar";
 import Input from "../Input/Input";
 let socket;
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://tdtu-chat-server.herokuapp.com/';
 const moment = require('moment')
 const Chat = ({location}) =>{
     const [username, setUsername] = useState('');
